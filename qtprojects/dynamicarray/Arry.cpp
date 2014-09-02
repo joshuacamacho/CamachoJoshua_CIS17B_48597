@@ -14,3 +14,7 @@ Arry::Arry(int rows,int cols)
         }
     }
 }
+
+char* Arry::toString(){
+ return 0;
+}

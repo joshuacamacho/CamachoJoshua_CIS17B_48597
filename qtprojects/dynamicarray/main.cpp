@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 
   QApplication app(argc, argv);
   QLabel *label = new QLabel("Test");
-  //Arry myArry(5,5);
+  Arry myArry(5,5);
   label->show();
 
 
@@ -16,3 +16,4 @@ int main(int argc, char *argv[])
 
   return app.exec();
 }
+
