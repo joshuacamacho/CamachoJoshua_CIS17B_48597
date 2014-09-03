@@ -10,6 +10,7 @@ private:
 public:
     Arry(int,int);
     char* toString();
+    ~Arry();
 };
 
 #endif // ARRY_H

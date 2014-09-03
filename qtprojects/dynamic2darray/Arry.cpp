@@ -36,3 +36,10 @@ char* Arry::toString(){
 
     return nums;
 }
+
+Arry::~Arry(){
+    for(int i=0; i<this->nRows; i++){
+        delete[]this->array[i];
+    }
+    delete[]this->array;
+}
