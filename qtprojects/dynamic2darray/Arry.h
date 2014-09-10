@@ -11,6 +11,7 @@ public:
     Arry(int,int);
     char* toString();
     ~Arry();
+    void printNums();
 };
 
 #endif // ARRY_H

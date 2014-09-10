@@ -1,12 +1,12 @@
 #include "Arry.h"
 #include <cstdlib>
-#include <ctime>
+#include <iostream>
 Arry::Arry(int rows, int cols)
 {
     this->nRows=rows;
     this->nCols=cols;
     this->array=new int*[rows];
-    srand(time(NULL));
+
     for(int i=0; i<rows; i++){
         this->array[i]=new int[cols];
     }
@@ -27,8 +27,14 @@ char* Arry::toString(){
             size++;
             nums[size]=(array[i][i]%10)+'0';
             size++;
-            nums[size]=' ';
-            size++;
+
+            if(j==(nCols-1)){
+                nums[size]='\n';
+                size++;
+            }else{
+                nums[size]=' ';
+                size++;
+            }
         }
     }
     nums[(nRows*nCols)*3]='\0';
@@ -36,6 +42,17 @@ char* Arry::toString(){
 
     return nums;
 }
+
+void Arry::printNums(){
+    for(int i=0; i<this->nRows; i++){
+        for(int j=0; j<this->nCols; j++){
+            std::cout<<this->array[i][j];
+            std::cout<<" ";
+        }
+        std::cout<<"\n";
+    }
+}
+
 
 Arry::~Arry(){
     for(int i=0; i<this->nRows; i++){
