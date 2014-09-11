@@ -25,9 +25,8 @@ char* Arry::toString(){
         for(int j=0; j<nCols; j++){
             nums[size]=(array[i][j]/10)+'0';
             size++;
-            nums[size]=(array[i][i]%10)+'0';
+            nums[size]=(array[i][j]%10)+'0';
             size++;
-
             if(j==(nCols-1)){
                 nums[size]='\n';
                 size++;
